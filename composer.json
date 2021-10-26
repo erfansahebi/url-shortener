@@ -1,0 +1,23 @@
+{
+  "name": "erfan/challenge",
+  "description": "SabaIdea challenge",
+  "type": "project",
+  "autoload": {
+	"psr-4": {
+	  "Erfan\\Challenge\\": "src/"
+	},
+	"files": [
+	  "config/bootstrap.php"
+	]
+  },
+  "authors": [
+	{
+	  "name": "Erfan Sahebi",
+	  "email": "erfansahebivayghan@gmail.com"
+	}
+  ],
+  "require": {
+	"vlucas/phpdotenv": "^5.3",
+	"firebase/php-jwt": "^5.4"
+  }
+}
