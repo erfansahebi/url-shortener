@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - "9906:3306"
+    expose:
+      # Opens port 3306 on the container
+      - '3306'
+    volumes:
+      - my-db:/var/lib/mysql
+  web:
+    build: .
+    image: php:7.4.23-apache
+    container_name: php_web
+    depends_on:
+      - db
+    volumes:
+      - ./:/var/www/
+      - ./public:/var/www/html
+    ports:
+      - "8100:80"
+    stdin_open: true
+    tty: true
+
+volumes:
+  my-db:
