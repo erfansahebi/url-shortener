@@ -1,8 +1,10 @@
-# SabaIdea Challenge Project
+# URL Shortener
 
 ## About
 
-This is SabaIdea challenge
+A frameworm with pure php language.
+
+Changes a big URL into tiny URL. (with Custom Dashboard)
 
 ## Requirements
 
@@ -24,3 +26,5 @@ docker-compose exec web php src/Database/migration.php
 
 - Api address:
   http://localhost:8100
+
+Developed By `Erfan Saheni`
