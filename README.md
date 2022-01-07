@@ -2,7 +2,7 @@
 
 ## About
 
-A frameworm with pure php language.
+A framework with pure php language.
 
 Changes a big URL into tiny URL. (with Custom Dashboard)
 
